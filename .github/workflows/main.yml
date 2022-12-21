@@ -42,4 +42,5 @@ jobs:
         JIRA_SERVER_URL: ${{ secrets.jira_server_url }}
         JIRA_USERNAME: ${{ secrets.jira_username }}
         JIRA_PASSWORD: ${{ secrets.jira_password }}
-      run: 'curl -H "Content-Type: multipart/form-data" -u $JIRA_USERNAME:$JIRA_PASSWORD  "pom.xml" "$JIRA_SERVER_URL/rest/raven/1.0/import/execution/junit?projectKey=QAHP-3570"'
+      #run: 'curl -H "Content-Type: multipart/form-data" -u $JIRA_USERNAME:$JIRA_PASSWORD  "pom.xml" "$JIRA_SERVER_URL/rest/raven/1.0/import/execution/junit?projectKey=QAHP-3570"'
+      run: curl -v https://mysite.atlassian.net --user abhaskar@nasb.com:$TOKEN
