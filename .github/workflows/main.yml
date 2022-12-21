@@ -38,9 +38,18 @@ jobs:
     #- name: Update dependency graph
     #  uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
     - name: Submit results to Xray
-      env:
-        JIRA_SERVER_URL: ${{ secrets.jira_server_url }}
-        JIRA_USERNAME: ${{ secrets.jira_username }}
-        JIRA_PASSWORD: ${{ secrets.jira_password }}
-      run: 'curl -H "Content-Type: multipart/form-data" -v https://mysite.atlassian.net --user abhaskar@nasb.com:$TOKEN  -F "file=@target/surefire-reports/main.result.xml" "$JIRA_SERVER_URL/rest/raven/1.0/import/execution/junit?projectKey=QAHP-3970"'
+      uses: mikepenz/xray-action@v0.9.4
+      with:
+        username: ${{ secrets.JIRA_USERNAME }}
+        password: ${{ secrets.TOKEN }}
+        testFormat: "junit"
+        testPaths: "**/surefire-reports/*.xml"
+        projectKey: "QAHP-3970"
+      #env:
+       # JIRA_SERVER_URL: ${{ secrets.jira_server_url }}
+       # JIRA_USERNAME: ${{ secrets.jira_username }}
+       # JIRA_PASSWORD: ${{ secrets.jira_password }}
+      #run: 'curl -H "Content-Type: multipart/form-data" -v https://mysite.atlassian.net --user abhaskar@nasb.com:$TOKEN  -F "file=@target/surefire-reports/main.result.xml" "$JIRA_SERVER_URL/rest/raven/1.0/import/execution/junit?projectKey=QAHP-3970"'
       #run: curl -v https://mysite.atlassian.net --user abhaskar@nasb.com:$TOKEN
+
+      
