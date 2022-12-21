@@ -45,7 +45,7 @@ jobs:
         testFormat: "junit"
         testPaths: "**/surefire-reports/*.xml"
         projectKey: "QAHP-3970"
-        echo: "Done"
+ 
       #env:
        # JIRA_SERVER_URL: ${{ secrets.jira_server_url }}
        # JIRA_USERNAME: ${{ secrets.jira_username }}
