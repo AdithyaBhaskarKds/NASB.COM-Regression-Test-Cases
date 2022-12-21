@@ -61,12 +61,14 @@
     </build>
 
     <dependencies>
-        <dependency>
-          <groupId>org.testng</groupId>
-          <artifactId>testng</artifactId>
-          <version>6.11</version>
-          <scope>test</scope>
-        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.7.0</version>
+    
+</dependency>
+
 
         <dependency>
                 <groupId>com.xpandit.xray</groupId>
