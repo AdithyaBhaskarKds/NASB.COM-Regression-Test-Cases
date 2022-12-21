@@ -91,7 +91,16 @@
 
 
 	</dependencies>
-
+<repositories>
+       	<repository>
+      		<id>xpandit</id>
+   		<name>xpand-releases</name>
+		<url>http://maven.xpand-it.com/artifactory/releases</url>
+		<releases>
+			<enabled>true</enabled>
+		</releases>
+	</repository>
+</repositories>
 	<build>
 		<plugins>
 
@@ -105,6 +114,16 @@
 					<target>${maven.compiler.target}</target>
 				</configuration>
 			</plugin>
+			<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M7</version>
+        <configuration>
+          <includes>
+            <include>AllScenarios.java</include>
+          </includes>
+        </configuration>
+      </plugin>
 
 			
 		</plugins>
@@ -114,21 +133,10 @@
         
     
 
-<repositories>
-       	<repository>
-      		<id>xpandit</id>
-   		<name>xpand-releases</name>
-		<url>http://maven.xpand-it.com/artifactory/releases</url>
-		<releases>
-			<enabled>true</enabled>
-		</releases>
-	</repository>
-</repositories>
 
 
-    <reporting>
-        
-    </reporting>
+
+    
 	
 
 </project>
