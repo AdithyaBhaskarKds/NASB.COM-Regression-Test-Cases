@@ -80,12 +80,7 @@
 			<version>4.1.2</version>
 		</dependency>
 		
-		<dependency>
-                <groupId>com.xpandit.xray</groupId>
-                <artifactId>xray-maven-plugin</artifactId>
-                <version>1.0.0</version>
-            	
-	    </dependency>
+		
 	    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
 <dependency>
     <groupId>org.slf4j</groupId>
@@ -145,11 +140,7 @@
             <plugin>
                 <artifactId>maven-surefire-report-plugin</artifactId>
             </plugin>
-            <plugin>
-                <groupId>com.xpandit.xray</groupId>
-                <artifactId>xray-maven-plugin</artifactId>
-                <version>1.0.0</version>
-            </plugin>
+            
         </plugins>
     </reporting>
 	
