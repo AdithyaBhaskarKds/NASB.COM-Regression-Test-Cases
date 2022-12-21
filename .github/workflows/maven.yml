@@ -45,6 +45,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
+        distribution: 'temurin'
     - name: Test with Maven
       run: mvn -B package --file pom.xml
       
@@ -56,6 +57,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
+        distribution: 'temurin'
     - name: Test with Class
       run: java AllScenarios.java
 
