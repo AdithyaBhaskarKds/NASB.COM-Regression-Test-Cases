@@ -35,5 +35,11 @@ jobs:
       run: echo "Done"
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
-    - name: Update dependency graph
-      uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+    #- name: Update dependency graph
+    #  uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+    - name: Submit results to Xray
+      env:
+        JIRA_SERVER_URL: ${{ secrets.jira_server_url }}
+        JIRA_USERNAME: ${{ secrets.jira_username }}
+        JIRA_PASSWORD: ${{ secrets.jira_password }}
+      run: 'curl -H "Content-Type: multipart/form-data" -u $JIRA_USERNAME:$JIRA_PASSWORD -F "file=@target/surefire-reports/TEST-com.xpand.java.NASB.xml" "$JIRA_SERVER_URL/rest/raven/1.0/import/execution/junit?projectKey=NASB"'
