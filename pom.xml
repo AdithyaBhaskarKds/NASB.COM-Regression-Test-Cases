@@ -2,7 +2,7 @@
 	
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.speridian</groupId>
-	<artifactId>NASB.COM</artifactId>
+	<artifactId>testng.xml</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
