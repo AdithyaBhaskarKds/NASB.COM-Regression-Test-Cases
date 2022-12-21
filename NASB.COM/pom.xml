@@ -37,7 +37,7 @@
                             <transformers>
                                 <transformer
                                     implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.test.user.AllScenarios.RUNALL</mainClass>
+                                    <mainClass>com.test.user.AllScenarios</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
