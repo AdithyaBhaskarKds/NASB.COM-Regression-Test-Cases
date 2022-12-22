@@ -27,4 +27,4 @@ jobs:
 
     - name: Build project with Maven
       
-      run: mvn -B package --file pom.xml
+      run: java LoginNASB.java
