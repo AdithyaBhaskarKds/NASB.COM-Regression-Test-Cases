@@ -1,7 +1,7 @@
 package com.pages;
 
 public class Add {
-	public void doThis()
+	public static void main()
 	{
 		int n1=6;
 		int n2=4;
