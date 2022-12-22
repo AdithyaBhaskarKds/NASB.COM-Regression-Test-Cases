@@ -30,7 +30,7 @@
                             <archive>
                                 <manifest>
                                     <mainClass>
-                                        AllScenarios
+                                        Add
                                     </mainClass>
                                 </manifest>
                             </archive>
