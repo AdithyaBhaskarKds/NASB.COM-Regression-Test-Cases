@@ -1,7 +1,7 @@
 package com.pages;
 
 public class Add {
-	public static void main()
+	public static void main(String[] args)
 	{
 		int n1=6;
 		int n2=4;
