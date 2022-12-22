@@ -36,7 +36,7 @@ public class AllScenarios extends Base_Class {
 	}
 
 	@Test(dataProvider = "TestData")
-	public  void RUNALL(Map <Object,Object> testdata, ITestContext context) throws IOException, InterruptedException {
+	public static void main(Map <Object,Object> testdata, ITestContext context) throws IOException, InterruptedException {
 
 		
 		try {
@@ -117,9 +117,8 @@ public class AllScenarios extends Base_Class {
 				
 //		        ***************  Check Apply Now Functionality Under Mortgage Section Ends Here *********************
 				
+				
 //EndTest
-				
-				
 				
 				System.out.println(("*** Test Suite " +  testdata.get("TestScenario").toString()+ " ending ***"));
 				ExtentTestManager.endTest();
