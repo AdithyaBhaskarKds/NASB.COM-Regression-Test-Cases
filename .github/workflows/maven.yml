@@ -26,4 +26,4 @@ jobs:
         java-version: 14
 
     - name: Build project with Maven
-      run: run testng.xml
+      run: java Add.java
